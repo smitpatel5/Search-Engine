@@ -36,9 +36,9 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Database (optional - keep if you want to deploy with data)
-# *.db
-# *.sqlite3
+# Database
+*.db
+*.sqlite3
 
 # Logs
 *.log
