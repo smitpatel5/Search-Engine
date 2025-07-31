@@ -36,9 +36,9 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Database
-*.db
-*.sqlite3
+# Database (keeping crawled_urls.db for deployment)
+# *.db
+# *.sqlite3
 
 # Logs
 *.log
