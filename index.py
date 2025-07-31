@@ -41,15 +41,20 @@ def index_urls(data):
         for word in words:
             index[word][url] += 1
 
-conn = sqlite3.connect('crawled_urls.db') 
-c = conn.cursor()
-c.execute("SELECT url, content FROM url_data")
-data = c.fetchall()
-index_urls(data)
-c.execute("SELECT url, title from url_data")
-data = c.fetchall()
-for url, title in data:
-    titles[url] = title
+try:
+    conn = sqlite3.connect('crawled_urls.db') 
+    c = conn.cursor()
+    c.execute("SELECT url, content FROM url_data")
+    data = c.fetchall()
+    index_urls(data)
+    c.execute("SELECT url, title from url_data")
+    data = c.fetchall()
+    for url, title in data:
+        titles[url] = title
+    conn.close()
+except:
+    # If database is not available, use empty data
+    pass
 
 average_length = sum(len(d) for d in documents.values()) / len(documents)
 
