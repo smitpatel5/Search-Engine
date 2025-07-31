@@ -1,50 +1,18 @@
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environment
+*.pyc
 venv/
-env/
-ENV/
+.venv/
+
+# System
+.DS_Store
 
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Database
-*.db
-*.sqlite3
+# Database (optional)
+# *.db
 
 # Logs
-*.log
-
-# Environment variables
-.env
-.env.local
-
-# NLTK data (will be downloaded on first run)
-nltk_data/ 
+*.log 
